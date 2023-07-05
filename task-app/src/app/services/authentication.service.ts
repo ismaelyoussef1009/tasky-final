@@ -15,7 +15,7 @@ export class AuthenticationService {
   actionCodeSettings = {
     // URL you want to redirect back to. The domain (www.example.com) for this
     // URL must be in the authorized domains list in the Firebase Console.
-    url: "http://localhost:4200/",
+    url: "https://tabaski.web.app/",
     // This must be true.
     handleCodeInApp: true,
     // dynamicLinkDomain: "https://travel-kmer.web.app/"
@@ -50,7 +50,7 @@ export class AuthenticationService {
             loginStatus: user?.emailVerified
           })
         })
-        // this.route.navigate(['']);
+        // this.route.navigate(['main']);
       }).catch((err: any) => {
         console.log(err.code);
         console.log(err.message);
@@ -90,7 +90,7 @@ export class AuthenticationService {
       .then((result) => {
         console.log(result.user);
 
-        this.route.navigate(['']);
+        this.route.navigate(['main']);
         onAuthStateChanged(this.auth, (user) => {
           this.localStore.set('User', {
             Name: user?.displayName,

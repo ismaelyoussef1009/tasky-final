@@ -1,0 +1,19 @@
+
+<form action="get" id="isma">
+    <h1>Sign In</h1>
+    <div>
+        <i class="fa-brands fa-google" (click)="googleAuth($event)"></i>
+    </div>
+    <div class="icon">
+        <i class="fa-regular fa-user"></i>
+    </div>
+
+    <input type="email"  [(ngModel)]="User.email" name="email" placeholder="email">
+
+    <div class="icon">
+        <i class="fa-solid fa-lock"></i>
+    </div>
+    <input type="password" [(ngModel)]="User.password" name="password" placeholder="password"><br>
+
+    <button class="btn" id="btn" id="youssef" (click)="submit($event,User)">sign in</button>
+</form>

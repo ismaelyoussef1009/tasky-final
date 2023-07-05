@@ -1,0 +1,73 @@
+@import '../../styles.scss';
+form{
+    width: 50%;
+    height: 60vh;
+    background: $mainColorTree;
+    text-align: center;
+    border-radius: 12px;
+    position: absolute;
+    // display: none;
+    // justify-content: center;
+    padding-top: 40px;
+    margin: 80px 24rem;
+    h1{
+        font-weight: 500;
+        font-size: 35px;
+        color: $mainColorTwo;
+    }
+    .icon{
+        position: absolute;
+        width: 23px;
+        margin: 20px 20px;
+        padding-left: 7px;
+        align-items: center;
+        font-size: 25px;
+        /* background: red; */
+        i{
+            color: white;
+        }
+    }
+    input{
+        width: 80%;
+        height: 15%;
+        margin: 5%  1%;
+        padding-left: 50px;
+        border-radius: 10px;
+        background: $pColor;
+        border: none;
+        font-size: 20px;
+        color: $pColor;
+        &:focus{
+            // border: 1px red;
+            outline: none;
+            color: $mainColorTwo;
+            font-size: 20px;
+            font-weight: 600;
+            
+        }
+        &::placeholder{
+            font-size: 15px;
+            font-weight: 600;
+            padding-top: 3px;
+            text-transform: uppercase;
+            // border: none;
+            color: $mainColorTwo;
+        }
+    }
+    button{
+        width: 70%;
+        height: 14%;
+        margin: 5% 17%;
+        border-radius: 10px;
+        font-size: 25px;
+        background: $mainColorTree;
+        border: none;
+        @include button;
+        font-weight: 700;
+        color: $mainColorTwo; 
+        &:hover{
+            background: $mainColorFour
+        }
+    }
+    
+}
