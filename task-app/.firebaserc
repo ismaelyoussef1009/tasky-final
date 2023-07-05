@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tabaski": {
+      "hosting": {
+        "task-app": [
+          "tabaski"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tabaski"
+  }
+}

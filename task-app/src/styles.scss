@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Cantarell:wght@400;700&family=Catamaran:wght@300&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&family=Kalam:wght@300;400;700&family=Lato:wght@700&family=Oswald&family=Outfit:wght@200;300&family=Poppins:wght@300;400;500;600&display=swap');
+@import "/src/assets/styles/reset";
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    // overflow-y: hidden;
+}
+button{
+    padding: 8px;
+    width: 90px;
+    font-size: 16px;
+    border: 1px solid rgb(198, 198, 198);
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+.container{
+    width: 90%;
+    height: 90vh;
+    margin: 20px auto;
+    box-sizing: border-box;
+    // background: red;
+}

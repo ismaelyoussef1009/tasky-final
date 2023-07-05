@@ -1,0 +1,15 @@
+$mainColorOne: #f4951188;
+$mainColorTwo: #ffffff;
+$mainColorTree: #8b27c7;
+$mainColorFour: #340351d1;
+$buttonColorOne: #fa4125;
+$buttonColorTwo: #fa801b;
+$buttonColorTree: #88bd00;
+$mainDivColorOne: #dbded9;
+$mainDivColorTwo: #f5f8f3;
+$h1Color: #de590b;
+$pColor: #9ea1a1;
+
+@mixin button {
+  cursor: pointer;
+}
