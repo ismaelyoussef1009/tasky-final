@@ -12,6 +12,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MainComponent } from './main/main.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { MainComponent } from './main/main.component';
     CreateAccountComponent,
     SignInComponent,
     HomePageComponent,
-    MainComponent
+    MainComponent,
+    FooterComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

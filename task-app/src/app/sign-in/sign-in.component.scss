@@ -1,24 +1,32 @@
 @import '../../styles.scss';
 form{
     width: 50%;
-    height: 60vh;
+    height: 70vh;
     background: $mainColorTree;
     text-align: center;
     border-radius: 12px;
     position: absolute;
     // display: none;
     // justify-content: center;
-    padding-top: 40px;
-    margin: 80px 24rem;
+    padding-top: 5px;
+    margin: 70px 24rem;
     h1{
         font-weight: 500;
         font-size: 35px;
         color: $mainColorTwo;
     }
+    .google{
+        color: $mainColorTwo;
+        // position: absolute;
+        i{
+            font-size: 22px;
+            cursor: pointer;
+        }
+    }
     .icon{
         position: absolute;
         width: 23px;
-        margin: 20px 20px;
+        margin: 68px 53px;
         padding-left: 7px;
         align-items: center;
         font-size: 25px;

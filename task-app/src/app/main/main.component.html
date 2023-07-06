@@ -1,1 +1,163 @@
-<h1>Hello and welcome</h1>
+<nav>
+    <div class="navigate">
+       <div class="logo">
+           <h1 routerLink="/main">Tasky</h1>
+           <ul class="nav-elements">
+               <!-- <li class="nav-list"><a routerLink="/addTask">Add Task</a></li> -->
+              <!-- <li class="nav-list" (click)="getData()"><a routerLink="/view">View Task</a></li> -->
+           </ul>
+       </div>
+        <div class="filter">
+            <div class="search">
+                <input type="search" placeholder="Search......">
+            </div>
+            <div class="profile">
+                <!-- <p>{{profile}}</p> -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="buttons">
+        <button (click)="popUp()" class="button">
+            Add +
+        </button>
+        <!-- <button (click)="getData()" class="button">
+            View Task
+        </button> -->
+    </div>
+    <div class="view-task">
+    </div>
+    <!-- add -->
+    <div class="">
+        <!-- Template driven approach -->
+        <div *ngIf="addPop" class="wrapper">
+
+            <div class="form-control">
+                <h1>Add Task</h1>
+                <form #addForm="ngForm" (ngSubmit)="addData(addForm.value)">
+                    <div class="form-label">
+                        <label for="">Task Name</label><br>
+                        <input type="text" name="taskName" ngModel class="name">
+                    </div>
+                    <div class="form-option">
+                        <div class="form-label">
+                            <label for="">Status</label><br>
+                            <select name="status" ngModel>
+                                <option *ngFor="let value of status" [value]="value">
+                                    {{value | titlecase}}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-label">
+                            <label for="">Level</label><br>
+                            <select name="level" ngModel>
+                                <option *ngFor="let value of level" [value]="value">
+                                    {{value | titlecase}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-label">
+                        <label for="">Difficulty</label><br>
+                        <select name="difficulty" ngModel class="difficulty">
+                            <option *ngFor="let value of difficulty" [value]="value">
+                                {{value | titlecase}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-option">
+                        <div class="form-label">
+                            <label for="">Start Date</label><br>
+                            <input type="date" name="startDate" ngModel class="df">
+                        </div>
+                        <div class="form-label">
+                            <label for="">Due Date</label><br>
+                            <input type="date" name="dueDate" ngModel class="df">
+                        </div>
+                    </div>
+                    <div class="form-label button">
+                        <button type="submit">Save</button>
+                        <button (click)="popUp()" class="cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- view -->
+    <div class="context">
+        <div *ngFor="let i = index; let item of data" class="view-task">
+            <p class="head">Task Number: {{i+1}}</p>
+            <p>Task Name: {{item.taskName | titlecase}}</p>
+            <p>Status: {{item.status | titlecase}}</p>
+            <p>Difficulty: {{item.difficulty | titlecase}}</p>
+            <p>Level: {{item.level | titlecase}}</p>
+            <p>Start Date: {{item.startDate}}</p>
+            <p>Due Date: {{item.dueDate}}</p>
+            <div class="buttons">
+                <button mat-icon-button color="primary" (click)="editTask(item.id)">
+                    <!-- <mat-icon>edit</mat-icon> -->
+                </button>
+                <button mat-icon-button color="warn" (click)="deleteTask(item.id)">
+                    <!-- <mat-icon>delete</mat-icon> -->
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- edit -->
+<div class="">
+    <div *ngIf="Popup" class="wrapper">
+
+        <div class="form-control">
+            <h1>Update Task</h1>
+            <form>
+                <div class="form-label">
+                    <label for="">Task Name</label><br>
+                    <input type="text" name="taskName" ngModel class="name">
+                </div>
+                <div class="form-option">
+                    <div class="form-label">
+                        <label for="">Status</label><br>
+                        <select name="status" ngModel>
+                            <option *ngFor="let value of status" [value]="value">
+                                {{value | titlecase}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-label">
+                        <label for="">Level</label><br>
+                        <select name="level" ngModel>
+                            <option *ngFor="let value of level" [value]="value">
+                                {{value | titlecase}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-label">
+                    <label for="">Difficulty</label><br>
+                    <select name="difficulty" ngModel class="difficulty">
+                        <option *ngFor="let value of difficulty" [value]="value">
+                            {{value | titlecase}}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-option">
+                    <div class="form-label">
+                        <label for="">Start Date</label><br>
+                        <input type="date" name="startDate" ngModel class="df">
+                    </div>
+                    <div class="form-label">
+                        <label for="">Due Date</label><br>
+                        <input type="date" name="dueDate" ngModel class="df">
+                    </div>
+                </div>
+                <div class="form-label button">
+                    <button type="submit">Update</button>
+                    <button (click)="pop()" class="cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
