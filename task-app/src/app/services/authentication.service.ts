@@ -41,7 +41,7 @@ export class AuthenticationService {
           console.log(error.code, error.message);
           
         })
-
+        
         onAuthStateChanged(this.auth, (user) => {
           this.localStore.set('User', {
             Name: user?.displayName,
