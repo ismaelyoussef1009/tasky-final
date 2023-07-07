@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, Fa
 import { Router } from '@angular/router';
 import { StorageService } from './local-store.service';
 import { Iuser } from '../interfaces/user.interface';
+import { UserService } from './users.service';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,6 @@ export class AuthenticationService {
     url: "https://tabaski.web.app/",
     // This must be true.
     handleCodeInApp: true,
-    // dynamicLinkDomain: "https://travel-kmer.web.app/"
   };
   signIn(user: Iuser) {
     signInWithEmailAndPassword(this.auth, user.email, user.password)
@@ -34,11 +34,13 @@ export class AuthenticationService {
               Name: user.username,
               email: user?.email,
               // PhotoURL: user?.photoURL,
-              loginStatus:true
+              loginStatus:true,
             })
+            
           
         }).catch((error)=>{
           console.log(error.code, error.message);
+          alert(error)
           
         })
         
@@ -49,11 +51,14 @@ export class AuthenticationService {
             PhotoURL: user?.photoURL,
             loginStatus: user?.emailVerified
           })
+          // alert(UserService)
         })
-        // this.route.navigate(['main']);
+        this.route.navigate(['main']);
       }).catch((err: any) => {
         console.log(err.code);
         console.log(err.message);
+        alert(err.code)
+        // alert(err.message)
       });
   }
 
@@ -79,9 +84,11 @@ export class AuthenticationService {
     createUserWithEmailAndPassword(this.auth, user.email, user.password)
       .then((result) => {
         console.log('Registration successfull');
-        this.route.navigate(['/sign-in']);
+        alert("Registration successfull")
+        this.route.navigate(['/main']);
       }).catch((err) => {
         console.log(err.code);
+        alert(err)
       });
 
   }

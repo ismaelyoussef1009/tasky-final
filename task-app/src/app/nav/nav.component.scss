@@ -6,6 +6,7 @@ nav {
 
     .navigate {
         width: 90%;
+        height: inherit;
         text-align: center;
         // background: red;
         margin: 10px auto;
@@ -13,12 +14,15 @@ nav {
         justify-content: space-between;
 
         .logo {
+            width: 25%;
             display: flex;
+            // position: relative;
 
-            // background: red;
+            // background: rgb(139, 220, 24);
             h1 {
+                position: absolute;
                 font-size: 35px;
-                padding-top: 5px;
+                top: -16px;
                 font-family: 'Kalam', cursive;
                 color: rgb(0, 149, 255);
                 cursor: pointer;
@@ -82,7 +86,10 @@ nav {
                 text-align: center;
 
                 p {
-                    padding-top: 10px;
+                    position: absolute;
+                    top: 5px;
+                    margin-left: 12px;
+                    // align-items: center;
                 }
             }
         }

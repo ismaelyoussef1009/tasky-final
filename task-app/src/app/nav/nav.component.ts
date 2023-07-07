@@ -8,7 +8,7 @@ import { Firestore, collection, deleteDoc, doc, getDocs } from '@angular/fire/fi
 })
 export class NavComponent {
  
-   profile = 'IR'
+   profile = 'IY'
 
    constructor( public firestore: Firestore){
   }

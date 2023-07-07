@@ -7,7 +7,7 @@ html, body { height: 100%; }
 body { 
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
-    // overflow-y: hidden;
+    overflow-y: hidden;
 }
 button{
     padding: 8px;
@@ -20,8 +20,11 @@ button{
 }
 .container{
     width: 90%;
-    height: 90vh;
+    // height: 60vh;
     margin: 20px auto;
     box-sizing: border-box;
     // background: red;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

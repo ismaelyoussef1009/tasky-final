@@ -1,22 +1,4 @@
-<nav>
-    <div class="navigate">
-       <div class="logo">
-           <h1 routerLink="/main">Tasky</h1>
-           <ul class="nav-elements">
-               <!-- <li class="nav-list"><a routerLink="/addTask">Add Task</a></li> -->
-              <!-- <li class="nav-list" (click)="getData()"><a routerLink="/view">View Task</a></li> -->
-           </ul>
-       </div>
-        <div class="filter">
-            <div class="search">
-                <input type="search" placeholder="Search......">
-            </div>
-            <div class="profile">
-                <!-- <p>{{profile}}</p> -->
-            </div>
-        </div>
-    </div>
-</nav>
+<app-nav></app-nav>
 
 <div class="container">
     <div class="buttons">
@@ -96,11 +78,11 @@
             <p>Start Date: {{item.startDate}}</p>
             <p>Due Date: {{item.dueDate}}</p>
             <div class="buttons">
-                <button mat-icon-button color="primary" (click)="editTask(item.id)">
-                    <!-- <mat-icon>edit</mat-icon> -->
+                <button style="color: blue;" mat-icon-button color="primary" (click)="editTask(item.id)">
+                    <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-icon-button color="warn" (click)="deleteTask(item.id)">
-                    <!-- <mat-icon>delete</mat-icon> -->
+                <button style="color: red;" mat-icon-button color="warn" (click)="deleteTask(item.id)">
+                    <mat-icon>delete</mat-icon>
                 </button>
             </div>
         </div>
